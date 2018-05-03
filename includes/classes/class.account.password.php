@@ -114,7 +114,7 @@ class AccountPassword extends Account {
 		}
 		
 		// check date
-		if(time() > (strtotime($requestData['request_date'])+$this->_changePasswordVerificationTimeLimit)) {
+		if(time() > (strtotime(databaseTime($requestData['request_date']))+$this->_changePasswordVerificationTimeLimit)) {
 			$this->_deletePasswordChangeRequest();
 			throw new Exception(lang('error_26',true));
 		}

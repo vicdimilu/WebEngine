@@ -94,7 +94,7 @@ class AccountEmail extends Account {
 		}
 		
 		// check date
-		if(time() > (strtotime($requestData['request_date'])+$this->_changeEmailVerificationTimeLimit)) {
+		if(time() > (strtotime(databaseTime($requestData['request_date']))+$this->_changeEmailVerificationTimeLimit)) {
 			$this->_deleteEmailChangeRequest();
 			throw new Exception(lang('error_76'));
 		}
