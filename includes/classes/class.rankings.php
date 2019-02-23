@@ -122,7 +122,7 @@ class Rankings {
 				if($this->_cfg['rankings_sum_master_level']) {
 					if(_TBL_CHR_ != _TBL_MASTERLVL_) {
 						// level + master level (different tables)
-						$players = $this->mu->queryFetch("SELECT TOP ".$this->_results." t1."._CLMN_CHR_NAME_.", t1."._CLMN_CHR_CLASS_.", t1."._CLMN_CHR_RSTS_.", t1."._CLMN_CHR_LVL_.", t2."._CLMN_ML_LVL_.", t1."._CLMN_CHR_MAP_.", (t1."._CLMN_CHR_LVL_." + t2."._CLMN_ML_LVL_.") as playerLevel FROM "._TBL_CHR_." as t1 INNER JOIN "._TBL_MASTERLVL_." as t2 ON t1."._CLMN_CHR_NAME_." = t2."._CLMN_ML_NAME_." WHERE t1."._CLMN_CHR_NAME_." NOT IN(".$this->_rankingsExcludeChars().") ORDER BY t1."._CLMN_CHR_RSTS_.", t1."._CLMN_CHR_LVL_." DESC");
+						$players = $this->mu->queryFetch("SELECT TOP ".$this->_results." t1."._CLMN_CHR_NAME_.", t1."._CLMN_CHR_CLASS_.", t1."._CLMN_CHR_RSTS_.", t1."._CLMN_CHR_LVL_.", t2."._CLMN_ML_LVL_.", t1."._CLMN_CHR_MAP_.", (t1."._CLMN_CHR_LVL_." + t2."._CLMN_ML_LVL_.") as playerLevel FROM "._TBL_CHR_." as t1 INNER JOIN "._TBL_MASTERLVL_." as t2 ON t1."._CLMN_CHR_NAME_." = t2."._CLMN_ML_NAME_." WHERE t1."._CLMN_CHR_NAME_." NOT IN(".$this->_rankingsExcludeChars().") ORDER BY t1."._CLMN_CHR_LVL_.", t1."._CLMN_CHR_RSTS_." DESC");
 					} else {
 						// level +master level (same tables)
 						$players = $this->mu->queryFetch("SELECT TOP ".$this->_results." "._CLMN_CHR_NAME_.", "._CLMN_CHR_CLASS_.", "._CLMN_CHR_RSTS_.", "._CLMN_CHR_LVL_.", "._CLMN_ML_LVL_.", "._CLMN_CHR_MAP_.", ("._CLMN_CHR_LVL_." + "._CLMN_ML_LVL_.") as playerLevel FROM "._TBL_CHR_." WHERE "._CLMN_CHR_NAME_." NOT IN(".$this->_rankingsExcludeChars().") ORDER BY "._CLMN_CHR_RSTS_." DESC");
