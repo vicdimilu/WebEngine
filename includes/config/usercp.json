@@ -10,7 +10,7 @@
         "order": 10
     },
     {
-        "active": true,
+        "active": false,
         "type": "internal",
         "phrase": "usercp_menu_txt_2",
         "link": "account\/character\/reset",
@@ -18,6 +18,16 @@
         "visibility": "user",
         "newtab": false,
         "order": 20
+    },
+    {
+        "active": true,
+        "type": "internal",
+        "phrase": "usercp_menu_txt_2",
+        "link": "account\/character\/resetmaster",
+        "icon": "reset.png",
+        "visibility": "user",
+        "newtab": false,
+        "order": 21
     },
     {
         "active": true,
@@ -30,7 +40,7 @@
         "order": 30
     },
     {
-        "active": true,
+        "active": false,
         "type": "internal",
         "phrase": "usercp_menu_txt_3",
         "link": "account\/character\/clearpk",
@@ -50,7 +60,7 @@
         "order": 50
     },
     {
-        "active": true,
+        "active": false,
         "type": "internal",
         "phrase": "usercp_menu_txt_10",
         "link": "account\/character\/addstats",
@@ -70,7 +80,7 @@
         "order": 70
     },
     {
-        "active": true,
+        "active": false,
         "type": "internal",
         "phrase": "usercp_menu_txt_4",
         "link": "account\/vote",
@@ -80,7 +90,7 @@
         "order": 80
     },
     {
-        "active": true,
+        "active": false,
         "type": "internal",
         "phrase": "usercp_menu_txt_5",
         "link": "shop\/credits",
