@@ -138,7 +138,7 @@ class PlayerResetMaster extends Player {
 		// reset skills
 		if($this->_resetSkills) {
             // clear skill tree
-            if(!$this->_clearMagicList()) throw new Exception(lang('error_74'));
+            if(!$this->_clearMagicList()) throw new Exception(lang('error_252'));
 		}
 		
 		// reset level up points
@@ -159,8 +159,8 @@ class PlayerResetMaster extends Player {
 			$this->_editValue(_CLMN_ML_POINT_, $newLevelUpPoints);
 		}
 		
-		// rebirth
-		if(!$this->_saveEdits()) throw new Exception(lang('error_252'));
+		// rebirth save
+		if(!$this->_saveEdits()) throw new Exception(lang('error_74'));
 
 	}
 	
