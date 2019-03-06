@@ -21,9 +21,10 @@ if(is_array($serverInfo)) {
 		echo '<div class="panel-body">';
 			echo '<table class="table">';
 				
-				echo '<tr><td>Version:</td><td>SXIII</td></tr>';
-				echo '<tr><td>Experience:</td><td>30x</td></tr>';
-				echo '<tr><td>Drop:</td><td>40%</td></tr>';
+				echo '<tr><td>'.lang('sidebar_srvinfo_txt_6').'</td><td>SVI</td></tr>';
+				echo '<tr><td>'.lang('sidebar_srvinfo_txt_7').'</td><td>2500x</td></tr>';
+				echo '<tr><td>'.lang('sidebar_srvinfo_txt_8').'</td><td>40%</td></tr>';
+				echo '<tr><td>'.lang('sidebar_srvinfo_txt_9').'</td><td>40%</td></tr>';
 				
 				echo '<tr><td>'.lang('sidebar_srvinfo_txt_2').'</td><td>'.number_format($serverInfo['total_accounts']).'</td></tr>';
 				echo '<tr><td>'.lang('sidebar_srvinfo_txt_3').'</td><td>'.number_format($serverInfo['total_players']).'</td></tr>';

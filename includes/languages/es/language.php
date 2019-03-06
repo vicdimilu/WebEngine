@@ -14,7 +14,7 @@
 // general
 $lang['server_time'] = 'Hora del Server';
 $lang['user_time'] = 'Hora Local';
-$lang['general_currency_name'] = 'Wcoin';
+$lang['general_currency_name'] = 'Kcoin';
 $lang['status_online'] = 'Online';
 $lang['status_offline'] = 'Offline';
 $lang['login'] = 'Ingresar';
