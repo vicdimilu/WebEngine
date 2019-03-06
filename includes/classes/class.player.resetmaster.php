@@ -98,7 +98,7 @@ class PlayerResetMaster extends Player {
 		$this->_editValue(_CLMN_CHR_RSTS_, $newReset);
 		
 		// rebirth
-		if(!$this->_saveEdits()) throw new Exception(lang('error_68'));
+		if(!$this->_saveEdits()) throw new Exception(lang('error_251'));
 	}
 
 	//function for edit skill tree table
@@ -141,7 +141,7 @@ class PlayerResetMaster extends Player {
 		}
 		
 		// rebirth
-		if(!$this->_saveEdits()) throw new Exception(lang('error_68'));
+		if(!$this->_saveEdits()) throw new Exception(lang('error_252'));
 
 	}
 	
