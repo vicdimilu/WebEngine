@@ -51,6 +51,11 @@ class PlayerResetMaster extends Player {
 		$this->_rebirth_Tree();
 	}
 	
+
+
+
+
+
 	//Function for rebirth skill tree
 	private function _clearMagicList() {
 		if(!check($this->_player)) return;
@@ -60,6 +65,11 @@ class PlayerResetMaster extends Player {
 		return true;
 	}
 	
+
+
+
+
+
 	//Function for edit character table
 	private function _rebirth_Character(){//OK FOR TEST
 		if(!check($this->_player)) throw new Exception(lang('error_24'));
@@ -101,6 +111,11 @@ class PlayerResetMaster extends Player {
 		if(!$this->_saveEdits()) throw new Exception(lang('error_251'));
 	}
 
+
+
+
+
+
 	//function for edit skill tree table
 	private function _rebirth_Tree(){
 		if(!check($this->_player)) throw new Exception(lang('error_24'));
@@ -109,6 +124,10 @@ class PlayerResetMaster extends Player {
 		$playerMLInformation = $this->getPlayerMasterLevelInformation();
 		if(!is_array($playerMLInformation)) throw new Exception(lang('error_67'));
 		
+		// edits begin
+		$this->_setEditTable(_TBL_MASTERLVL_);
+		$this->_setEditNameColumn(_CLMN_ML_NAME_);
+
 		// Master level requirement
 		if($this->_requiredMastelLevel >= 1) {
 			if($playerMLInformation[_CLMN_ML_LVL_] < $this->_requiredMastelLevel) throw new Exception(lang('error_33'));
