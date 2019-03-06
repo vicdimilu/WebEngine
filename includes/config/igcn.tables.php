@@ -42,7 +42,8 @@ define('_TBL_CHR_', 'Character');
 	define('_CLMN_CHR_CLASS_', 'Class');
 	define('_CLMN_CHR_ZEN_', 'Money');
 	define('_CLMN_CHR_LVL_', 'cLevel');
-	define('_CLMN_CHR_RSTS_', 'RESETS');
+	define('_CLMN_CHR_RSTS_', 'ResetCount');
+	define('_CLMN_CHR_MRSTS_', 'MasterResetCount');
 	define('_CLMN_CHR_LVLUP_POINT_', 'LevelUpPoint');
 	define('_CLMN_CHR_STAT_STR_', 'Strength');
 	define('_CLMN_CHR_STAT_AGI_', 'Dexterity');
@@ -56,21 +57,22 @@ define('_TBL_CHR_', 'Character');
 	define('_CLMN_CHR_MAP_X_', 'MapPosX');
 	define('_CLMN_CHR_MAP_Y_', 'MapPosY');
 	define('_CLMN_CHR_MAGIC_L_', 'MagicList');
-	define('_CLMN_CHR_MLVL_', 'mLevel');
-	define('_CLMN_CHR_MLPOINT_', 'mlPoint');
-	define('_CLMN_CHR_MLEXP_', 'mlExperience');
+	define('_CLMN_CHR_MLVL_', 'MasterResetCount');
+	define('_CLMN_CHR_MLPOINT_', 'MasterResetCount');
+	define('_CLMN_CHR_MLEXP_', 'Experience');
 
-define('_TBL_MASTERLVL_', 'Character');
+define('_TBL_MASTERLVL_', 'MasterSkillTree');
 	define('_CLMN_ML_NAME_', 'Name');
-	define('_CLMN_ML_LVL_', 'mLevel');
-	define('_CLMN_ML_EXP_', 'mlExperience');
-	define('_CLMN_ML_NEXP_', 'mlNextExp');
-	define('_CLMN_ML_POINT_', 'mlPoint');
+	define('_CLMN_ML_LVL_', 'MasterLevel');
+	define('_CLMN_ML_EXP_', 'MasterExperience');
+	define('_CLMN_ML_NEXP_', 'MasterExperience');
+	define('_CLMN_ML_POINT_', 'MasterPoint');
+	define('_CLMN_ML_SKILL_', 'MasterSkill');
 	
-define('_TBL_MC_', 'MEMB_CREDITS');
-	define('_CLMN_MC_ID_', 'memb___id');
-	define('_CLMN_MC_CREDITS_', 'credits');
-	define('_CLMN_MC_USED_', 'used');
+define('_TBL_MC_', 'CashShopData');
+	define('_CLMN_MC_ID_', 'AccountID');
+	define('_CLMN_MC_CREDITS_', 'WCoinC');
+	define('_CLMN_MC_USED_', 'GoblinPoint');
 
 define('_TBL_MUCASTLE_DATA_', 'MuCastle_DATA');
 	define('_CLMN_MCD_GUILD_OWNER_', 'OWNER_GUILD');
@@ -96,16 +98,16 @@ define('_TBL_GUILDMEMB_', 'GuildMember');
 define('_TBL_MUCASTLE_RS_', 'MuCastle_REG_SIEGE');
 	define('_CLMN_MCRS_GUILD_', 'REG_SIEGE_GUILD');
 	
-define('_TBL_GENS_', 'IGC_Gens');
+define('_TBL_GENS_', 'Gens_Reward');
 	define('_CLMN_GENS_NAME_', 'Name');
-	define('_CLMN_GENS_TYPE_', 'Influence');
-	define('_CLMN_GENS_RANK_', 'Class');
-	define('_CLMN_GENS_POINT_', 'Points');
+	define('_CLMN_GENS_TYPE_', 'Status');
+	define('_CLMN_GENS_RANK_', 'Rank');
+	define('_CLMN_GENS_POINT_', '[MuOnline].[dbo].[Gens_Rank].[Contribution]');
 	
-define('_TBL_VIP_', 'T_VIPList');
-	define('_CLMN_VIP_ID_', 'AccountID');
-	define('_CLMN_VIP_DATE_', 'Date');
-	define('_CLMN_VIP_TYPE_', 'Type');
+define('_TBL_VIP_', 'MEMB_INFO');
+	define('_CLMN_VIP_ID_', 'memb___id');
+	define('_CLMN_VIP_DATE_', 'AccountExpireDate');
+	define('_CLMN_VIP_TYPE_', 'AccountLevel');
 
 	
 /*

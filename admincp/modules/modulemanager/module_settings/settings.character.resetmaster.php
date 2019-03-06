@@ -46,6 +46,11 @@ if(check($_POST['settings_submit'])) {
 		if(!in_array($_POST['multiply_reward_leveluppoints'], array(0, 1))) throw new Exception('Invalid setting value (multiply_reward_leveluppoints)');
 		$setting['multiply_reward_leveluppoints'] = $_POST['multiply_reward_leveluppoints'];
 		
+		// Multiply Zen Rewards
+		if(!check($_POST['multiply_reward_zen'])) throw new Exception('Invalid setting value (multiply_reward_zen)');
+		if(!in_array($_POST['multiply_reward_zen'], array(0, 1))) throw new Exception('Invalid setting value (multiply_reward_zen)');
+		$setting['multiply_reward_zen'] = $_POST['multiply_reward_zen'];
+		
 		// Reset Limit
 		if(!check($_POST['reset_master_limit'])) throw new Exception('Invalid setting value (reset_master_limit)');
 		if(!Validator::UnsignedNumber($_POST['reset_master_limit'])) throw new Exception('Invalid setting value (reset_master_limit)');
@@ -162,6 +167,16 @@ echo '<div class="row">';
 										echo 'Disabled';
 									echo '</label>';
 								echo '</div>';
+							echo '</td>';
+						echo '</tr>';
+						
+						echo '<tr>';
+							echo '<td>';
+								echo '<strong>Multiply Zen Reward</strong>';
+								echo '<p class="setting-description">Amount of zen for each reset the character will receive.</p>';
+							echo '</td>';
+							echo '<td>';
+								echo '<input type="text" class="form-control" name="multiply_reward_zen" value="'.$cfg['multiply_reward_zen'].'">';
 							echo '</td>';
 						echo '</tr>';
 						

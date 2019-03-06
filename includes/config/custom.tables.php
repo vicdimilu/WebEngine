@@ -67,6 +67,7 @@ define('_TBL_MASTERLVL_', 'MasterSkillTree');
 	define('_CLMN_ML_EXP_', 'MasterExperience');
 	define('_CLMN_ML_NEXP_', 'MasterExperience');
 	define('_CLMN_ML_POINT_', 'MasterPoint');
+	define('_CLMN_ML_SKILL_', 'MasterSkill');
 	
 define('_TBL_MC_', 'CashShopData');
 	define('_CLMN_MC_ID_', 'AccountID');
