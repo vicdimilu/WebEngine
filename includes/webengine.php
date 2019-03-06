@@ -69,6 +69,7 @@ if(!@include_once(__PATH_CLASSES__ . 'class.filter.php')) throw new Exception('C
 if(!@include_once(__PATH_CLASSES__ . 'class.vote.php')) throw new Exception('Could not load class (vote).');
 if(!@include_once(__PATH_CLASSES__ . 'class.player.php')) throw new Exception('Could not load class (player).');
 if(!@include_once(__PATH_CLASSES__ . 'class.player.reset.php')) throw new Exception('Could not load class (player.reset).');
+if(!@include_once(__PATH_CLASSES__ . 'class.player.resetmaster.php')) throw new Exception('Could not load class (player.resetmaster).');
 if(!@include_once(__PATH_CLASSES__ . 'class.player.unstick.php')) throw new Exception('Could not load class (player.unstick).');
 if(!@include_once(__PATH_CLASSES__ . 'class.player.clearpk.php')) throw new Exception('Could not load class (player.clearpk).');
 if(!@include_once(__PATH_CLASSES__ . 'class.player.resetstats.php')) throw new Exception('Could not load class (player.resetstats).');
