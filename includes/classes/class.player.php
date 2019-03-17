@@ -13,8 +13,14 @@
 
 class Player {
 	
+	/**
+	 * Nombre de Usuario.
+	 */
 	protected $_username;
 	protected $_playerid;
+	/**
+	 * Nombre del personaje.
+	 */
 	protected $_player;
 	
 	protected $_playerInformation;

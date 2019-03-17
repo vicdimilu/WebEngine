@@ -46,37 +46,22 @@ class PlayerResetMaster extends Player {
 		
 	}
 	
-	public function rebirth() {
-		$this->_rebirth_Character();
-		$this->_rebirth_Tree();
-	}
-	
-
-
-
-
-
-	//Function for rebirth skill tree
-	private function _clearMagicList() {
-		if(!check($this->_player)) return;
-		
-		$result = $this->db->query("UPDATE "._TBL_MASTERLVL_." SET "._CLMN_ML_SKILL_." = null WHERE "._CLMN_ML_NAME_." = ?", array($this->_player));
-		if(!$result) return;
-		return true;
-	}
-	
 
 
 
 
 
 	//Function for edit character table
-	private function _rebirth_Character(){//OK FOR TEST
-		if(!check($this->_player)) throw new Exception(lang('error_24'));
-		
+	public function rebirthCharacter(){//OK FOR TEST
+
 		// get player information
 		$playerInformation = $this->getPlayerInformation();
+		$playerMasterInformation = $this->getPlayerMasterLevelInformation();
+
+		// find player information ?
 		if(!is_array($playerInformation)) throw new Exception(lang('error_67'));
+		// find player master information ?
+		if(!is_array($playerMasterInformation)) throw new Exception(lang('error_67'));
 		
 		// check if player belongs to account
 		if(!$this->belongsToAccount()) throw new Exception(lang('error_32'));
@@ -117,7 +102,7 @@ class PlayerResetMaster extends Player {
 
 
 	//function for edit skill tree table
-	private function _rebirth_Tree(){
+	public function rebirthTree(){
 		if(!check($this->_player)) throw new Exception(lang('error_24'));
 		
 		// get player master level information
@@ -162,6 +147,20 @@ class PlayerResetMaster extends Player {
 		// rebirth save
 		if(!$this->_saveEdits()) throw new Exception(lang('error_74'));
 
+	}
+	
+
+
+
+
+
+	//Function for rebirth skill tree
+	private function _clearMagicList() {
+		if(!check($this->_player)) return;
+		
+		$result = $this->db->query("UPDATE "._TBL_MASTERLVL_." SET "._CLMN_ML_SKILL_." = null WHERE "._CLMN_ML_NAME_." = ?", array($this->_player));
+		if(!$result) return;
+		return true;
 	}
 	
 }

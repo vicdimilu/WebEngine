@@ -24,10 +24,16 @@ if(!is_array($accountPlayers)) throw new Exception(lang('error_46',true));
 // form submit
 if(check($_GET['player'])) {
 	try {
-		$playerResetMaster = new PlayerResetMaster();
-		$playerResetMaster->setUsername($_SESSION['username']);
-		$playerResetMaster->setPlayer($_GET['player']);
-		$playerResetMaster->rebirth();
+		//Stage 1: Character Table
+		$playerResetMasterCharacter = new PlayerResetMaster();
+		$playerResetMasterCharacter->setUsername($_SESSION['username']);
+		$playerResetMasterCharacter->setPlayer($_GET['player']);
+		$playerResetMasterCharacter->rebirthCharacter();
+		//Stage 2: Master Table
+		$playerResetMasterTree = new PlayerResetMaster();
+		$playerResetMasterTree->setUsername($_SESSION['username']);
+		$playerResetMasterTree->setPlayer($_GET['player']);
+		$playerResetMasterTree->rebirthTree();
 		
 		message('success', lang('success_8',true));
 	} catch(Exception $ex) {
