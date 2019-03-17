@@ -89,8 +89,8 @@ class PlayerResetMaster extends Player {
 			$this->_editValue(_CLMN_CHR_ZEN_, ($playerInformation[_CLMN_CHR_ZEN_]+$this->_multiplyRewardZen));
 		}
 		
-		// rebirth increment
-		$this->_editValue(_CLMN_CHR_RSTS_, $newReset);
+		// rebirth increment (master reset count) 
+		$this->_editValue(_CLMN_CHR_MRSTS_, $newReset);
 		
 		// rebirth
 		if(!$this->_saveEdits()) throw new Exception(lang('error_251'));
