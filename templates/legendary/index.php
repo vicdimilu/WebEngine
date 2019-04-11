@@ -31,7 +31,7 @@ $contentColSize = Handler::showSidebar() ? 8 : 12;
 		<meta name="description" content="<?php echo Handler::getWebsiteDescription(); ?>"/>
 		<meta name="keywords" content="<?php echo Handler::getWebsiteKeywords(); ?>"/>
 		<link rel="shortcut icon" href="<?php echo Handler::templateBase(); ?>favicon.ico"/>
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link href="<?php echo Handler::templateCSS('style.css'); ?>" rel="stylesheet" media="screen">
 		<link href="<?php echo Handler::templateCSS('override.css'); ?>" rel="stylesheet" media="screen">
 		<script>
