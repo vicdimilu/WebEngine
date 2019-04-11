@@ -86,10 +86,16 @@ input[type=text]:focus, input[type=password]:focus, input[type=number]:focus {
 
 /* NAVBAR */
 .navbar {
-	background: rgba(0, 0, 0, 0.5);
+	/*background: rgba(0, 0, 0, 0.5);*/
+	/*background: #000000 url('../img/navbar_background.png') no-repeat top center;*/
 	width: 100%;
 	margin: 0px auto;
 	text-align: center;
+}
+
+.navbar-image {
+	position: absolute;
+	margin: -53px 0px 0px 13%;
 }
 
 .navbar ul {

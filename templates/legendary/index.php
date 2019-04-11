@@ -62,6 +62,9 @@ $contentColSize = Handler::showSidebar() ? 8 : 12;
 		</div>
 		
 		<!-- NAVBAR -->
+		<div class="navbar-image">
+			<img src="<?php echo Handler::templateIMG('navbar_background.png'); ?>" />				
+		</div>
 		<div class="navbar">
 			<?php templateBuildNavbar(); ?>
 		</div>
