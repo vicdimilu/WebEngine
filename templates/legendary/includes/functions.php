@@ -14,7 +14,6 @@
 function templateBuildNavbar() {
 	$cfg = loadConfig('navbar');
 	if(!is_array($cfg)) return;
-	
 	echo '<ul>';
 	foreach($cfg as $element) {
 		if(!is_array($element)) continue;

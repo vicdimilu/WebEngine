@@ -61,15 +61,21 @@ $contentColSize = Handler::showSidebar() ? 8 : 12;
 			</div>
 		</div>
 		
-		<!-- NAVBAR -->
-		<div class="navbar">
-			<?php templateBuildNavbar(); ?>
-		</div>
-		
 		<!-- HEADER -->
 		<div id="header">
 			<div id="headerLogo">
 				<a href="<?php echo Handler::websiteLink(); ?>"><img src="<?php echo Handler::templateIMG('logo.png'); ?>" /></a>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<!-- NAVBAR -->
+					<div class="navbar">
+						<?php templateBuildNavbar(); ?>
+					</div>
+				</div>
 			</div>
 		</div>
 		
@@ -93,6 +99,9 @@ $contentColSize = Handler::showSidebar() ? 8 : 12;
 		<!-- CONTENT -->
 		<div id="container">
 			<div id="content">
+				<div class="row">
+					<img class="navbar-image" src="<?php echo Handler::templateIMG('navbar_background.png'); ?>" />	
+				</div>
 				<div class="row">
 					<div class="col-xs-<?php echo $contentColSize; ?>">
 						<?php Handler::loadModule(); ?>
