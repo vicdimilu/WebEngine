@@ -1,10 +1,15 @@
 html {
 	min-width: 760px;
+	max-width: 1300px;
+	max-height: 768px;
 	height: 100%;
+	overflow-x:hidden;
 }
 
 body {
 	background: #000000 url('../img/background.jpg') no-repeat top center;
+	background-size: 120%;
+	background-position-x: -150px;
 	color: #333333;
 	font-family: 'Arial', 'Helvetica', 'sans-serif';
 	font-size: 14px;
@@ -52,25 +57,29 @@ input[type=password]:focus {
 }
 
 .logo {
-	width: 760px;
-	display: block;
-	margin: 0px auto;
+	width: 100px !important;
+	height: 100px !important;
+	position: absolute;
+	box-sizing: border-box;
+	margin-top: -250px;
+	margin-left: 400px;
 	padding: 10px 0px;
-	text-align: center;
 }
 
 .container {
-	background: #ffffff;
-	width: 760px;
+	background:url("../img/Background_login.png") no-repeat;
+	width: 800px;
+	height: 100%;
 	display: block;
-	margin: 0px auto;
+	margin-top: 160px;
+	margin-right: 50px;
 	padding: 0px;
 }
 
 .close-bar {
 	width: 100%;
 	text-align: right;
-	padding: 15px;
+	padding: 35px 35px 0px 0px;
 }
 
 .content {

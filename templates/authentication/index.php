@@ -34,6 +34,7 @@ if(!defined('access') or !access) die();
 		<div class="logo">
 			<a href="<?php echo Handler::websiteLink(); ?>"><img src="<?php echo Handler::templateIMG(); ?>logo.png" /></a>
 		</div>
+		
 		<div class="container">
 			<div class="close-bar">
 				<a href="<?php echo Handler::websiteLink(); ?>"><img src="<?php echo Handler::templateIMG(); ?>close.png" /></a>
