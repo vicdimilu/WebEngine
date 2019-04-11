@@ -69,7 +69,7 @@ $contentColSize = Handler::showSidebar() ? 8 : 12;
 		<!-- HEADER -->
 		<div id="header">
 			<div id="headerLogo">
-				<a href="<?php echo Handler::websiteLink(); ?>"><img src="<?php echo Handler::templateIMG('logo.png'); ?>" /></a>
+				<a href="<?php echo Handler::websiteLink(); ?>"><img src="<?php echo Handler::templateIMG('logo.svg'); ?>" /></a>
 			</div>
 		</div>
 		
