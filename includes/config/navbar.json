@@ -31,7 +31,7 @@
         "type": "internal",
         "phrase": "menu_txt_9",
         "link": "account\/vote",
-        "visibility": "always",
+        "visibility": "user",
         "newtab": false,
         "order": 50
     },
