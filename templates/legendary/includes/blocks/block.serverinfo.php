@@ -14,7 +14,7 @@
 // Server info block
 $serverInfo = loadCache('server_info.cache');
 if(is_array($serverInfo)) {
-	echo '<div class="panel panel-sidebar">';
+	echo '<div class="panel panel-sidebar border border-white">';
 		echo '<div class="panel-heading">';
 			echo '<h3 class="panel-title">'.lang('sidebar_srvinfo_txt_1').'</h3>';
 		echo '</div>';
@@ -22,7 +22,8 @@ if(is_array($serverInfo)) {
 			echo '<table class="table">';
 				
 				echo '<tr><td>'.lang('sidebar_srvinfo_txt_6').'</td><td>SVI</td></tr>';
-				echo '<tr><td>'.lang('sidebar_srvinfo_txt_7').'</td><td>2500x</td></tr>';
+				echo '<tr><td>'.lang('sidebar_srvinfo_txt_7').'</td><td>5000x</td></tr>';
+				echo '<tr><td>'.lang('sidebar_srvinfo_txt_10').'</td><td>4000x</td></tr>';
 				echo '<tr><td>'.lang('sidebar_srvinfo_txt_8').'</td><td>40%</td></tr>';
 				echo '<tr><td>'.lang('sidebar_srvinfo_txt_9').'</td><td>40%</td></tr>';
 				

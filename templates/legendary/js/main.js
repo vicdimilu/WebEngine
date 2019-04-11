@@ -3,7 +3,7 @@ $(function() {
 	serverTime.init("tServerTime", "tLocalTime");
 	
 	// Initiate bootstrap tooltips
-	$('[data-toggle="tooltip"]').tooltip();
+	$('[data-toggle="tooltip"]').tooltip(); 
 });
 
 var serverTime = {

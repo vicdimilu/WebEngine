@@ -628,9 +628,10 @@ $lang['sidebar_srvinfo_txt_3'] = "Total Characters";
 $lang['sidebar_srvinfo_txt_4'] = "Total Guilds";
 $lang['sidebar_srvinfo_txt_5'] = "Online Users";
 $lang['sidebar_srvinfo_txt_6'] = "Version";
-$lang['sidebar_srvinfo_txt_7'] = "Experience";
+$lang['sidebar_srvinfo_txt_7'] = "Experience Normal";
 $lang['sidebar_srvinfo_txt_8'] = "Zen Drop";
 $lang['sidebar_srvinfo_txt_9'] = "Item Drop";
+$lang['sidebar_srvinfo_txt_10'] = "Experience Master";
 
 // contact us
 $lang['contactus_txt_1'] = "Email Address";

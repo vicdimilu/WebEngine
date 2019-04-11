@@ -31,7 +31,8 @@ $contentColSize = Handler::showSidebar() ? 8 : 12;
 		<meta name="description" content="<?php echo Handler::getWebsiteDescription(); ?>"/>
 		<meta name="keywords" content="<?php echo Handler::getWebsiteKeywords(); ?>"/>
 		<link rel="shortcut icon" href="<?php echo Handler::templateBase(); ?>favicon.ico"/>
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link href="<?php echo Handler::templateCSS('bootstrap.css'); ?>" rel="stylesheet" media="screen">
 		<link href="<?php echo Handler::templateCSS('style.css'); ?>" rel="stylesheet" media="screen">
 		<link href="<?php echo Handler::templateCSS('override.css'); ?>" rel="stylesheet" media="screen">
 		<script>
@@ -40,23 +41,21 @@ $contentColSize = Handler::showSidebar() ? 8 : 12;
 	</head>
 	<body>
 		<!-- GLOBAL MENU -->
-		<div class="globalmenu">
-			<div class="globalmenu-content">
-				<div class="row">
-					<div class="col-xs-6">
-						<a href="<?php echo Handler::getWebEngineWebsite(); ?>" target="_blank"><img src="<?php echo Handler::templateIMG('webengine_logo_xs_gs.png'); ?>"/></a>
-					</div>
-					<div class="col-xs-6 text-right">
-						<?php if(isAdmin()) { ?>
-						<a href="<?php echo Handler::websiteLink('admincp'); ?>/" class="btn btn-xs"><?php echo lang('admincp'); ?></a>
-						<?php } ?>
-						<?php if(!isLoggedIn()) { ?>
-						<a href="<?php echo Handler::websiteLink('login'); ?>" class="btn btn-xs"><?php echo lang('login'); ?></a>
-						<a href="<?php echo Handler::websiteLink('register'); ?>" class="btn btn-xs btn-red"><?php echo lang('register'); ?></a>
-						<?php } else { ?>
-						<a href="<?php echo Handler::websiteLink('logout'); ?>" class="btn btn-xs btn-red"><?php echo lang('logout'); ?></a>
-						<?php } ?>
-					</div>
+		<div class="container-fluid globalmenu">
+			<div class="row">
+				<div class="col-xs-6 col-lg-6 pt-1">
+					<a href="<?php echo Handler::getWebEngineWebsite(); ?>" target="_blank"><img class="img-fluid" src="<?php echo Handler::templateIMG('webengine_logo_xs_gs.png'); ?>"/></a>
+				</div>
+				<div class="col-xs-6 col-lg-6 text-right">
+					<?php if(isAdmin()) { ?>
+					<a href="<?php echo Handler::websiteLink('admincp'); ?>/" class="btn btn-xs btn-sm btn-lg"><?php echo lang('admincp'); ?></a>
+					<?php } ?>
+					<?php if(!isLoggedIn()) { ?>
+					<a href="<?php echo Handler::websiteLink('login'); ?>" class="btn btn-xs btn-sm btn-lg"><?php echo lang('login'); ?></a>
+					<a href="<?php echo Handler::websiteLink('register'); ?>" class="btn btn-xs btn-sm btn-lg btn-red"><?php echo lang('register'); ?></a>
+					<?php } else { ?>
+					<a href="<?php echo Handler::websiteLink('logout'); ?>" class="btn btn-xs btn-sm btn-lg btn-red"><?php echo lang('logout'); ?></a>
+					<?php } ?>
 				</div>
 			</div>
 		</div>
@@ -68,7 +67,7 @@ $contentColSize = Handler::showSidebar() ? 8 : 12;
 			</div>
 		</div>
 
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-12">
 					<!-- NAVBAR -->
@@ -100,14 +99,11 @@ $contentColSize = Handler::showSidebar() ? 8 : 12;
 		<div id="container">
 			<div id="content">
 				<div class="row">
-					<img class="navbar-image" src="<?php echo Handler::templateIMG('navbar_background.png'); ?>" />	
-				</div>
-				<div class="row">
-					<div class="col-xs-<?php echo $contentColSize; ?>">
+					<div class="col-xs-<?php echo $contentColSize; ?> col-lg-<?php echo $contentColSize; ?>">
 						<?php Handler::loadModule(); ?>
 					</div>
 					<?php if(Handler::showSidebar()) { ?>
-					<div class="col-xs-4 sidebar">
+					<div class="col-xs-4 col-lg-4 sidebar">
 						<?php Handler::loadSidebarBlocks(); ?>
 					</div>
 					<?php } ?>
@@ -117,29 +113,36 @@ $contentColSize = Handler::showSidebar() ? 8 : 12;
 		
 		<!-- FOOTER -->
 		<div class="footer">
-			<div class="col-xs-8">
-				<p><?php echo lang('footer_txt_1', array(date("Y"), config('server_name'), Handler::websiteLink('terms-of-service'), Handler::websiteLink('privacy-policy'))); ?></p>
-				<p><?php echo lang('footer_txt_2'); ?></p>
-				<br />
-				<p><?php echo lang('footer_txt_3'); ?></p>
-				<br />
-				<p><a href="<?php echo Handler::getWebEngineWebsite(); ?>" target="_blank" title="<?php echo Handler::getWebEngineVersion(true); ?>"><img src="<?php echo Handler::templateIMG('webengine_footer_logo.png'); ?>"/></a></p>
-			</div>
-			<div class="col-xs-4">
-				<div class="col-xs-6 text-center">
-					<span><?php echo lang('server_time'); ?></span><br />
-					<span class="footer-time"><time id="tServerTime"></time></span>
-				</div>
-				<div class="col-xs-6 text-center">
-					<span><?php echo lang('user_time'); ?></span><br />
-					<span class="footer-time"><time id="tLocalTime"></time></span>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-8 col-lg-8">
+						<p><?php echo lang('footer_txt_1', array(date("Y"), config('server_name'), Handler::websiteLink('terms-of-service'), Handler::websiteLink('privacy-policy'))); ?></p>
+						<p><?php echo lang('footer_txt_2'); ?></p>
+						<br />
+						<p><?php echo lang('footer_txt_3'); ?></p>
+						<br />
+						<p><a href="<?php echo Handler::getWebEngineWebsite(); ?>" target="_blank" title="<?php echo Handler::getWebEngineVersion(true); ?>"><img src="<?php echo Handler::templateIMG('webengine_footer_logo.png'); ?>"/></a></p>
+					</div>
+					<div class="col-xs-4 col-lg-4">
+						<div class="row">
+							<div class="col-xs-6 col-lg-6 text-center">
+								<span><?php echo lang('server_time'); ?></span><br />
+								<span class="footer-time"><time id="tServerTime"></time></span>
+							</div>
+							<div class="col-xs-6 col-lg-6 text-center">
+								<span><?php echo lang('user_time'); ?></span><br />
+								<span class="footer-time"><time id="tLocalTime"></time></span>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 		
 		<!-- JS -->
-		<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="<?php echo Handler::templateJS('main.js'); ?>"></script>
-		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	</body>
 </html>
