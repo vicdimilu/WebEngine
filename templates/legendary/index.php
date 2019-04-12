@@ -69,7 +69,7 @@ $contentColSize = Handler::showSidebar() ? 8 : 12;
 
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-xs-12 col-lg-12">
 					<!-- NAVBAR -->
 					<div class="navbar">
 						<?php templateBuildNavbar(); ?>
@@ -96,24 +96,22 @@ $contentColSize = Handler::showSidebar() ? 8 : 12;
 		-->
 		
 		<!-- CONTENT -->
-		<div id="container">
-			<div id="content">
-				<div class="row">
-					<div class="col-xs-<?php echo $contentColSize; ?> col-lg-<?php echo $contentColSize; ?>">
-						<?php Handler::loadModule(); ?>
-					</div>
-					<?php if(Handler::showSidebar()) { ?>
-					<div class="col-xs-4 col-lg-4 sidebar">
-						<?php Handler::loadSidebarBlocks(); ?>
-					</div>
-					<?php } ?>
+		<div id="content" class="container">
+			<div class="row">
+				<div class="col-xs-<?php echo $contentColSize; ?> col-lg-<?php echo $contentColSize; ?>">
+					<?php Handler::loadModule(); ?>
 				</div>
+				<?php if(Handler::showSidebar()) { ?>
+				<div class="col-xs-4 col-lg-4 sidebar">
+					<?php Handler::loadSidebarBlocks(); ?>
+				</div>
+				<?php } ?>
 			</div>
 		</div>
 		
 		<!-- FOOTER -->
 		<div class="footer">
-			<div class="container">
+			<div class="container-fluid">
 				<div class="row">
 					<div class="col-xs-8 col-lg-8">
 						<p><?php echo lang('footer_txt_1', array(date("Y"), config('server_name'), Handler::websiteLink('terms-of-service'), Handler::websiteLink('privacy-policy'))); ?></p>

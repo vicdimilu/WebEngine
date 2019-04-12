@@ -56,12 +56,14 @@ input[type=text]:focus, input[type=password]:focus, input[type=number]:focus {
 }
 
 .footer {
-	width: 1140px;
+	border-top: 2px solid rgb(71, 71, 71);
+	width: 100%;
 	margin: 0px auto;
 	background: #efefef;
 	padding: 50px 60px;
 	font-size: 12px;
 	overflow: auto;
+	display: inline-block;
 }
 
 .footer-time {
@@ -133,10 +135,11 @@ input[type=text]:focus, input[type=password]:focus, input[type=number]:focus {
 
 #content {
 	width: 100%;
+	min-height: 1220px;
 	overflow: auto;
-	min-height: 500px;
+	margin-top: -20px;
 	background: url('../img/home_background.png') no-repeat top center;
-	padding: 50px 60px;
+	padding: 60px 60px;
 	-moz-border-radius: 5px 5px 0px 0px;
 	-webkit-border-radius: 5px 5px 0px 0px;
 	border-radius: 5px 5px 0px 0px;
