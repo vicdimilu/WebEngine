@@ -8,7 +8,7 @@ html {
 
 body {
 	background: #000000 url('../img/background.jpg') no-repeat top center;
-	background-size: 120%;
+	background-size: 120% 140%;
 	background-position-x: -150px;
 	color: #333333;
 	font-family: 'Arial', 'Helvetica', 'sans-serif';
@@ -68,8 +68,8 @@ input[type=password]:focus {
 
 .container {
 	background:url("../img/Background_login.png") no-repeat;
+	background-size: 100% 100%;
 	width: 800px;
-	height: 100%;
 	display: block;
 	margin-top: 160px;
 	margin-right: 50px;
