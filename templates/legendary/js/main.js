@@ -7,8 +7,8 @@ $(function() {
 });
 
 var serverTime = {
-	weekDays: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-	monthNames: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+	weekDays: ["Dom", "Lun", "Mar", "Mier", "Jue", "Vie", "Sab"],
+	monthNames: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
 	serverDate: null,
 	localDate: null,
 	dateOffset: null,
